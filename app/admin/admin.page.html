@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar> <span>
+    <p slot="end" *ngIf="user$ |async as user">
+      Hola {{user.email}}
+    </p>
+  </span>
+  <span></span>
+    <ion-buttons slot="secondary">
+      <ion-button routerLink="/home"> inicio  
+        <ion-icon  color="primary" name="home"></ion-icon>
+      </ion-button>
+      
+      <ion-button (click)="Salir()"> Salir
+        <ion-icon  color="secondary"  name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+    
+    <ion-title>Servicios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+ <app-newserv></app-newserv>
+ 
+</ion-content> 

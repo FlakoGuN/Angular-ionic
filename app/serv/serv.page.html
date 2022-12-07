@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <span>
+      <p slot="end" *ngIf="user$ |async as user">
+        Hola {{user.email}}
+      </p>
+    </span>
+    <span></span>
+      <ion-buttons slot="secondary">
+        <ion-button routerLink="/home"> inicio  
+          <ion-icon  color="primary" name="home"></ion-icon>
+        </ion-button>
+        
+        <ion-button routerLink="/admin"> Atras
+          <ion-icon  color="secondary"  name="exit"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Nuevo Servicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Nombre del equipo</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Epson, Graphtec U otros">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Modelo del Equipo</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Epson, Graphtec U otros">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Serial</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Epson, Graphtec U otros">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Tipo de Falla</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</ion-content>

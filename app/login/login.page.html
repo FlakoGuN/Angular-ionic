@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid" routerLink="/home">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Inicio
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" color="secondary" routerLink="/forgot-page">
+        Reiniciar contraseña??
+        <ion-icon slot="end" name="help-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="flotaing">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="flotaing">PassWord</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row>
+     <ion-col>
+     <ion-button type="submit" (click)="onLogin(email, password)"
+     expand ="block"
+     > Entrar</ion-button>
+
+    </ion-col></ion-row>
+   
+<span class="divider line one-line, centertext" > O  </span>
+
+ <ion-row>
+ <ion-col>
+ <ion-button type="submit" color="danger" (click)="onLoginGoole(email, password)" expand="block" >
+  Entrar con Google
+
+  </ion-button>
+  </ion-col>
+  </ion-row> 
+
+ 
+  </form>
+  
+  <ion-row>
+    <ion-col>
+      <p>
+        <a routerLink="/register" class="centertext"> Crear Una cuenta </a>
+      </p>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

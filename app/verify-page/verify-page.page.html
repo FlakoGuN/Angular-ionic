@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pagina de Verificacion</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid" routerLink="/home">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Inicio
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid" routerLink="/login">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="user$ |async as user">
+<ion-row>
+  <ion-col>
+  <h2 class="centertext">  Gracias Por Registrarte</h2>
+   <p class="centertext"> Ha sido enviado un <strong>{{user.email}}</strong> de reinicio de contraseña</p>
+
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+  <ion-button expand="block" (click)="onSendEmail"> Enviar Correo de Verificacion</ion-button>
+  </ion-col>
+</ion-row>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "loginionic-4a612": {
+      "hosting": {
+        "app": [
+          "loginionic-4a612"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ssmartpageservice"
+  }
+}
